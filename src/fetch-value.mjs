@@ -66,8 +66,6 @@ export default async function fetchValue(contractDetails, fieldDetails, short = 
 
 	const mapped = argValues.map((arg) => btoa(JSON.stringify(arg)));
 
-	console.log({cadence})
-
 	try {
 		return fetch(url, {
 			method: "POST",
