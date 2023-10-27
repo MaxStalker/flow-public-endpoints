@@ -55,9 +55,9 @@ const cadenceTemplate = (contractName, address, fieldName, returnType, argList) 
 	}
 `;
 
-export default async function fetchValue(contractDetails, fieldDetails, short = true) {
+export default async function fetchValue(contractDetails, fieldDetails, short = false) {
 	const { contractName, address } = contractDetails;
-	const { name, type, isFunction = false, argList = [], argValues = [] } = fieldDetails;
+	const { name, type, isFunction = false, argList = null, argValues = [] } = fieldDetails;
 
 	const cadence = cadenceTemplate(contractName, address, name, type, argList);
 	const script = btoa(cadence);
@@ -65,6 +65,8 @@ export default async function fetchValue(contractDetails, fieldDetails, short = 
 	const url = `https://rest-mainnet.onflow.org/v1/scripts`;
 
 	const mapped = argValues.map((arg) => btoa(JSON.stringify(arg)));
+
+	console.log({cadence})
 
 	try {
 		return fetch(url, {
