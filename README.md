@@ -19,9 +19,8 @@ Send `POST` request with following fields in the body:
 
 ```bash
 curl --request POST \
-  --url http://localhost:3001/mainnet/0x921ea449dffec68a/FlovatarComponent/getComponent \
+  --url https://flow-public-endpoints.onrender.com/mainnet/0x921ea449dffec68a/FlovatarComponent/getComponent \
   --header 'Content-Type: application/json' \
-  --header 'User-Agent: insomnia/2023.5.8' \
   --data '{
 	"args": [
 		{
@@ -40,8 +39,7 @@ curl --request POST \
 ## FlovatarComponent `totalSupply`
 ```bash
 curl --request POST \
-  --url http://localhost:3001/mainnet/0x921ea449dffec68a/FlovatarComponent/totalSupply \
+  --url https://flow-public-endpoints.onrender.com/mainnet/0x921ea449dffec68a/FlovatarComponent/totalSupply \
   --header 'Content-Type: application/json' \
-  --header 'User-Agent: insomnia/2023.5.8' \
   --data '{}'
 ```
