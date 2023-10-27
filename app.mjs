@@ -11,7 +11,7 @@ const port = process.env.PORT || 3001;
 let parser, server;
 
 // Routes
-app.post("/mainnet/:address/:contractName", async (req, res) => {
+app.get("/mainnet/:address/:contractName", async (req, res) => {
 	const { address, contractName } = req.params;
 
 	const declarations = await getDeclarations(parser)(address, contractName);
