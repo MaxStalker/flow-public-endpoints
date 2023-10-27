@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"lib": ["ES2020", "dom", "ESNext"],
+		"composite": true,
+		"skipLibCheck": true,
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"allowSyntheticDefaultImports": true,
+		"outDir": "build"
+	},
+	"include": ["index.ts"]
+}

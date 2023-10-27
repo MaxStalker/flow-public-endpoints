@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "dev": "node ast.mjs",
+    "run": "nodemon app.mjs"
+  },
+  "dependencies": {
+    "@onflow/cadence-parser": "^0.42.1",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "prettier": "^3.0.3"
+  }
+}
